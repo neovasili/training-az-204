@@ -1,6 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
+import { MetricAggregationType } from "@pulumi/azure-native/types/enums/monitor";
 import { ResourceGroup } from "@pulumi/azure-native/resources";
-import { DiagnosticSetting } from "@pulumi/azure-native/insights";
+import { DiagnosticSetting, AutoscaleSetting } from "@pulumi/azure-native/monitor";
 import { AppServicePlan, WebApp, WebAppDiagnosticLogsConfiguration } from "@pulumi/azure-native/web";
 
 const tags = {
@@ -16,11 +17,28 @@ enum ServicePlanName {
   Basic1 = "B1",
   Basic2 = "B2",
   Basic3 = "B3",
+  PremiumV3_0 = "P0V3",
 }
 
 enum ServicePlanTier {
   Free = "Free",
   Basic = "Basic",
+  PremiumV3 = "PremiumV3",
+}
+
+enum Interval {
+  OneMinute = "PT1M",
+  FiveMinutes = "PT5M",
+  FitheenMinutes = "PT15M",
+}
+
+enum MetricName {
+  CpuPercentage = "CpuPercentage",
+}
+
+enum Operator {
+  GreaterThan = "GreaterThan",
+  LessThan = "LessThan",
 }
 
 // Create an Azure Resource Group
@@ -33,9 +51,67 @@ const appServicePlan = new AppServicePlan("AppServicePlan", {
   kind: "linux",
   reserved: true,
   sku: {
-    name: ServicePlanName.Basic1,
-    tier: ServicePlanTier.Basic,
+    name: ServicePlanName.PremiumV3_0,
+    tier: ServicePlanTier.PremiumV3,
   },
+  perSiteScaling: true,
+  tags,
+});
+
+const autoscaleSetting = new AutoscaleSetting("autoscaleSetting", {
+  resourceGroupName: resourceGroup.name,
+  targetResourceUri: appServicePlan.id,
+  enabled: true,
+  profiles: [
+    {
+      name: "AutoScaleProfile",
+      capacity: {
+        minimum: "1",
+        maximum: "3",
+        default: "1",
+      },
+      rules: [
+        {
+          metricTrigger: {
+            metricName: MetricName.CpuPercentage,
+            metricNamespace: "Microsoft.Web/serverfarms",
+            metricResourceUri: appServicePlan.id,
+            timeGrain: Interval.OneMinute,
+            statistic: MetricAggregationType.Average,
+            timeWindow: Interval.FiveMinutes,
+            timeAggregation: MetricAggregationType.Average,
+            operator: Operator.GreaterThan,
+            threshold: 70,
+          },
+          scaleAction: {
+            direction: "Increase",
+            type: "ChangeCount",
+            value: "1",
+            cooldown: Interval.FiveMinutes,
+          },
+        },
+        {
+          metricTrigger: {
+            metricName: MetricName.CpuPercentage,
+            metricNamespace: "Microsoft.Web/serverfarms",
+            metricResourceUri: appServicePlan.id,
+            timeGrain: Interval.OneMinute,
+            statistic: MetricAggregationType.Average,
+            timeWindow: Interval.FiveMinutes,
+            timeAggregation: MetricAggregationType.Average,
+            operator: Operator.LessThan,
+            threshold: 30,
+          },
+          scaleAction: {
+            direction: "Decrease",
+            type: "ChangeCount",
+            value: "1",
+            cooldown: Interval.FiveMinutes,
+          },
+        },
+      ],
+    },
+  ],
   tags,
 });
 
@@ -62,6 +138,10 @@ const webApp = new WebApp("webApp", {
     http20Enabled: true,
     numberOfWorkers: 1,
     requestTracingEnabled: true,
+    limits: {
+      maxPercentageCpu: 70,
+      maxMemoryInMb: 1536,
+    },
   },
   httpsOnly: true,
   tags,
