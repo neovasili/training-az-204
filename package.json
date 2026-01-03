@@ -1,0 +1,8 @@
+{
+  "description": "AZ-204 training",
+  "author": "",
+  "dependencies": {
+    "@pulumi/pulumi": "*",
+    "@pulumi/azure-native": "2.11.0"
+  }
+}
