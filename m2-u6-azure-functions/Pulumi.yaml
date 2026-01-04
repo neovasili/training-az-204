@@ -1,0 +1,10 @@
+name: azure-functions
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: AZ-204
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/f067b28d-8084-49e1-a619-95199c311266.zip
