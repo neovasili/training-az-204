@@ -1,0 +1,10 @@
+name: cosmosdb
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: CosmosDB account, database and container
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/32e0faaa-55b8-465d-8386-9240f21134ea.zip

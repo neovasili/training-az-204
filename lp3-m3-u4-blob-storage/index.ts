@@ -23,7 +23,7 @@ const containerName = "data";
 const azureClient = getClientConfigOutput();
 
 // Create an Azure Resource Group
-const resourceGroup = new ResourceGroup("ResourceGroup");
+const resourceGroup = new ResourceGroup("ResourceGroup", { tags });
 // Create an Azure Storage Account
 const storageAccount = new StorageAccount("StorageAccount", {
   accountName,
