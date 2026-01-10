@@ -1,0 +1,10 @@
+name: blob-storage
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: AZ-204 Blob storage training
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/e6aa70d4-2cd7-4f0f-bebb-e0ab01f3fbc1.zip
