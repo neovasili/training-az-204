@@ -1,0 +1,10 @@
+name: az-container-instances
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Deploy an Azure container instance for a given image
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/ce74fc05-6687-46a5-9200-0181d7032252.zip
