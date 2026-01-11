@@ -14,6 +14,9 @@ importers:
       '@pulumi/azure-native':
         specifier: 3.12.0
         version: 3.12.0
+      '@pulumi/azuread':
+        specifier: ^6.8.0
+        version: 6.8.0
       '@pulumi/pulumi':
         specifier: '*'
         version: 3.214.1
@@ -280,6 +283,9 @@ packages:
 
   '@pulumi/azure@6.31.0':
     resolution: {integrity: sha512-vEKcB6ESAvUNEFElfZV1ZR3BUPfWAYN9+UAsSiKkD6swnnX0lXk4cwr7yFxyKg+BF+fGmpa8lqmly1U8t77peg==}
+
+  '@pulumi/azuread@6.8.0':
+    resolution: {integrity: sha512-wGoBBT+BkZcZAXo0ApWHOuo3DNJ2Iok+4LKrx3mDs9z0/SIXBv3YxaaAC7mWnB2vK5Sk0te17RpVYbsDkM0abQ==}
 
   '@pulumi/pulumi@3.214.1':
     resolution: {integrity: sha512-SgUrYq6tRn8EeZ0PszVVXVfeCms/tUkjLnt9pcRp/f9+5fIDKy8ak3ehlJcdqQCEOsn9lg/q/mZBjqy7CaPB7g==}
@@ -1736,6 +1742,15 @@ snapshots:
     transitivePeerDependencies:
       - bluebird
       - encoding
+      - supports-color
+      - ts-node
+      - typescript
+
+  '@pulumi/azuread@6.8.0':
+    dependencies:
+      '@pulumi/pulumi': 3.214.1
+    transitivePeerDependencies:
+      - bluebird
       - supports-color
       - ts-node
       - typescript

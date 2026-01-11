@@ -1,0 +1,10 @@
+name: az-container-apps
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure Container apps environment and container app
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/af42b2af-fd27-46c8-b334-575fb1a14316.zip
