@@ -1,0 +1,10 @@
+name: msal
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Entra App Registration for authentication and authorization of client apps
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/5dcf9905-0657-4d87-9788-be977ad69160.zip

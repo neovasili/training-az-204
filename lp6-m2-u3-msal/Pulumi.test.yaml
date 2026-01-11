@@ -1,4 +1,4 @@
-name: aca
+name: msal
 config:
   azure-native:location: westeurope
   azure-native:subscriptionId: 12eba716-cf1f-4237-87d8-1a9d23ae1c60
