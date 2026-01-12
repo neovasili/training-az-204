@@ -1,0 +1,10 @@
+name: vault
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure Vault and permissions for my user to create, modify, list and delete secrets in the vault
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/33b2959a-11fa-4f23-af59-e9dbe151e8eb.zip
