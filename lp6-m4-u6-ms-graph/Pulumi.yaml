@@ -1,0 +1,10 @@
+name: ms-graph
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure Entra ID app registration
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/eba8d270-9e75-417c-9b24-e5cdd551eb83.zip

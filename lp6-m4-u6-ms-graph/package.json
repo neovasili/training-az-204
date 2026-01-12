@@ -1,0 +1,6 @@
+{
+  "name": "ms-graph",
+  "description": "AZ-204 training",
+  "main": "index.ts",
+  "extends": "../tsconfig.json"
+}
