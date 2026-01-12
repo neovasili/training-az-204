@@ -1,0 +1,10 @@
+name: app-config
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure application configuration instance and grant permissions to my Azure user to own it
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/cce651a3-38c8-43ce-a613-0ceb17f33bab.zip

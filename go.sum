@@ -4,6 +4,8 @@ github.com/Azure/azure-sdk-for-go/sdk/azcore v1.20.0 h1:JXg2dwJUmPB9JmtVmdEB16AP
 github.com/Azure/azure-sdk-for-go/sdk/azcore v1.20.0/go.mod h1:YD5h/ldMsG0XiIw7PdyNhLxaM317eFh5yNLccNfGdyw=
 github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.13.1 h1:Hk5QBxZQC1jb2Fwj6mpzme37xbCDdNTxU7O9eb5+LB4=
 github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.13.1/go.mod h1:IYus9qsFobWIc2YVwe/WPjcnyCkPKtnHAqUYeebc8z0=
+github.com/Azure/azure-sdk-for-go/sdk/data/azappconfig v1.2.0 h1:uU4FujKFQAz31AbWOO3INV9qfIanHeIUSsGhRlcJJmg=
+github.com/Azure/azure-sdk-for-go/sdk/data/azappconfig v1.2.0/go.mod h1:qr3M3Oy6V98VR0c5tCHKUpaeJTRQh6KYzJewRtFWqfc=
 github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos v1.4.2 h1:zqxnp53f5Jn5PFU5Av4mvyWEbZ7whg72AoOCEzlXFKc=
 github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos v1.4.2/go.mod h1:Krtog/7tz27z75TwM5cIS8bxEH4dcBUezcq+kGVeZEo=
 github.com/Azure/azure-sdk-for-go/sdk/internal v1.11.2 h1:9iefClla7iYpfYWdzPCRDozdmndjTm8DXdpCzPajMgA=
@@ -12,6 +14,8 @@ github.com/Azure/azure-sdk-for-go/sdk/keyvault/azsecrets v0.12.0 h1:xnO4sFyG8UH2
 github.com/Azure/azure-sdk-for-go/sdk/keyvault/azsecrets v0.12.0/go.mod h1:XD3DIOOVgBCO03OleB1fHjgktVRFxlT++KwKgIOewdM=
 github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.7.1 h1:FbH3BbSb4bvGluTesZZ+ttN/MDsnMmQP36OSnDuSXqw=
 github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.7.1/go.mod h1:9V2j0jn9jDEkCkv8w/bKTNppX/d0FVA1ud77xCIP4KA=
+github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armsubscriptions v1.3.0 h1:wxQx2Bt4xzPIKvW59WQf1tJNx/ZZKPfN+EhPX3Z6CYY=
+github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armsubscriptions v1.3.0/go.mod h1:TpiwjwnW/khS0LKs4vW5UmmT9OWcxaveS8U7+tlknzo=
 github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.6.3 h1:ZJJNFaQ86GVKQ9ehwqyAFE6pIfyicpuJ8IkVaPBc6/4=
 github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.6.3/go.mod h1:URuDvhmATVKqHBH9/0nOiNKk0+YcwfQ3WkK5PqHKxc8=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.6.0 h1:XRzhVemXdgvJqCH0sFfrBUTnUJSBrBf7++ypk+twtRs=
