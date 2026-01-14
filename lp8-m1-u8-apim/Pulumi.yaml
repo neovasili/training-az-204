@@ -1,0 +1,10 @@
+name: apim
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure API Management instance where API is defined with openapi spec file
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/07cd73cc-55c7-416b-883d-05a0344880e9.zip

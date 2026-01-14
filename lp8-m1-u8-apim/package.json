@@ -1,0 +1,13 @@
+{
+  "name": "apim",
+  "description": "Azure API Management instance where API is defined with openapi spec file",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "@pulumi/pulumi": "*",
+    "@pulumi/azure-native": "2.11.0"
+  }
+}
