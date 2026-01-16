@@ -1,0 +1,10 @@
+name: event-hub
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: EventHub namespace and event hub
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/75d9d8eb-0591-4884-9b40-3ebdc154689b.zip
