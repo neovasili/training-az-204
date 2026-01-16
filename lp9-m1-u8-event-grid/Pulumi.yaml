@@ -1,0 +1,10 @@
+name: event-grid
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure Event grid, permissions for my user to publish messages
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/29bbea7e-2bff-4023-8d4a-c0fb72994d20.zip

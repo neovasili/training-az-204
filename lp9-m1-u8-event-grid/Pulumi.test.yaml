@@ -1,0 +1,10 @@
+name: event-grid
+config:
+  event-grid:viewerWebsiteUrl: "https://neovasiliaz204eventviewer.azurewebsites.net"
+  azure-native:location: westeurope
+  azure-native:subscriptionId: 12eba716-cf1f-4237-87d8-1a9d23ae1c60
+  azure-native:tenantId: 06b1722b-c9c0-4bfd-a011-0ce9ece4a630
+  pulumi:tags:
+    owner: neovasili
+    purpose: training
+    certification: az-204
