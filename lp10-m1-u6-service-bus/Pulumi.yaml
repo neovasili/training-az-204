@@ -1,0 +1,10 @@
+name: service-bus
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure Service bus namespace and queue
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/c3c18d95-d556-4350-af7f-fd5c55cc6d14.zip

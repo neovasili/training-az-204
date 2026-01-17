@@ -18,6 +18,8 @@ github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.7.1 h1:FbH3BbSb4bvGlu
 github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.7.1/go.mod h1:9V2j0jn9jDEkCkv8w/bKTNppX/d0FVA1ud77xCIP4KA=
 github.com/Azure/azure-sdk-for-go/sdk/messaging/azeventhubs/v2 v2.0.1 h1:0jZwGhuG42Gm/yv/sSxO0L6uh7JfJBflK8Eh8SAi3QE=
 github.com/Azure/azure-sdk-for-go/sdk/messaging/azeventhubs/v2 v2.0.1/go.mod h1:mWrFe78uRBS76gOOmm6+/nR0INwQeGZfhankYx6ShQA=
+github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus v1.10.0 h1:kE5kpeiSqu4jcCQ/sWuyggMXJ/pT6oQ99+8hwPmyeJ0=
+github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus v1.10.0/go.mod h1:IAN3Z0DMtehoxoQQnfqg1891z1P7GNoDryKtFcAyMBI=
 github.com/Azure/azure-sdk-for-go/sdk/messaging/eventgrid/azeventgrid v1.0.0 h1:iSs3BpwqQ5IHvuxAMeqO6q/9sCJYhjDZZgQZd++n374=
 github.com/Azure/azure-sdk-for-go/sdk/messaging/eventgrid/azeventgrid v1.0.0/go.mod h1:1IRNP46kxovPgEKGS0W3NrGasGj8JomLgvEnR48Sxko=
 github.com/Azure/azure-sdk-for-go/sdk/messaging/eventgrid/aznamespaces v1.0.0 h1:NuKtfJWQv4V2lcSDh+lZnm3rLNTQl6ePtqKUHY0qSPU=
