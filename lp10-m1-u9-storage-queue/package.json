@@ -1,0 +1,6 @@
+{
+  "name": "storage-queue",
+  "description": "AZ-204 training",
+  "main": "index.ts",
+  "extends": "../tsconfig.json"
+}

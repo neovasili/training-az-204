@@ -1,0 +1,10 @@
+name: storage-queue
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Azure Storage account with queue
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/95590f7f-9551-439e-b1f1-433bedd4252d.zip
